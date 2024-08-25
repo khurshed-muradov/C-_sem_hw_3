@@ -6,7 +6,7 @@
 // 5 -> 1, 8, 27, 64, 125
 System.Console.Write("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
-
+System.Console.Write(number + " -> ");
 for (int i = 1; i <= number; i++)
 {
     if (i == number)
