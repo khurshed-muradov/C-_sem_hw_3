@@ -8,17 +8,30 @@
 using System.Globalization;
 using System.Net;
 
-System.Console.WriteLine("Введите пятизначное число: ");
-int number = int.Parse(Console.ReadLine()!);
-if (number >= 10000 && number <= 99999)
+int Number()
 {
 
-}
-else
-{
-    System.Console.WriteLine("Число не пятизначное! Повторите попытку!");
-}
+    int number;
 
+    while (true)
+    {
+        Console.Write("Введите пятизначное число: ");
+        string input = Console.ReadLine()!;
+
+        // Проверяем, является ли ввод числом и имеет ли оно 5 цифр
+        if (int.TryParse(input, out number) && input.Length == 5)
+
+        {
+            break; // Прерываем цикл, если число корректное
+        }
+        else
+        {
+            Console.WriteLine("Ошибка: введено не пятизначное число. Попробуйте снова.");
+        }
+    }
+    return number;
+}
+int number = Number();
 int digit5 = number % 10;
 int digit4 = (number % 100) / 10;
 int digit3 = (number % 1000) / 100;
@@ -31,5 +44,5 @@ if (digit1 == digit5 || digit2 == digit3)
 }
 else
 {
-    System.Console.WriteLine("Нет");
+    System.Console.WriteLine(number + " -> " + "Нет");
 }

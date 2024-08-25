@@ -4,8 +4,14 @@
 // 5 -> 1, 8, 27, 64, 125
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
-System.Console.Write("Введите число: ");
-int number = int.Parse(Console.ReadLine()!);
+
+int Number()
+{
+    System.Console.Write("Введите число: ");
+    int number = int.Parse(Console.ReadLine()!);
+    return number;
+}
+int number = Number();
 System.Console.Write(number + " -> ");
 for (int i = 1; i <= number; i++)
 {
