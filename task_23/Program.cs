@@ -11,7 +11,7 @@ for (int i = 1; i <= number; i++)
 {
     if (i == number)
     {
-        System.Console.WriteLine((i * i) * i);
+        System.Console.Write((i * i) * i);
     }
     else
     {
